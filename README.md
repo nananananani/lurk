@@ -1,10 +1,12 @@
 # Lurk .˳·˖✶𓆩𓁺𓆪✶˖·˳.
-#### - beta version of a social deception based multiplayer horror game with unique character, player specific clues and a pressure injecting time based survival.
+#### - beta version of a social deception based multiplayer horror game with unique characters, player specific clues and a pressure injecting time based survival.
 ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 ##### Overview:
 * 2D top-down, social deduction, horror
 * beta version: 4 hiders vs 1 seeker
 * 8-10 minute high-intensity game play
+
+(helped us win 2nd place in a game-development hackathon! ⋆˚࿔)
 
 ##### Unique Features:
 * Fully hand-drawn characters, assets and maps using krita
@@ -16,3 +18,4 @@
 * Art: Krita, Lospec, AI-assisted renders
 * Audio: Beepbox, Mixkit
 * Collab Tools: Google Docs, Github
+  

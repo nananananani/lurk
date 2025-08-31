@@ -1,0 +1,136 @@
+[gd_scene load_steps=13 format=3 uid="uid://cohpye5o00w25"]
+
+[ext_resource type="Texture2D" uid="uid://dxajcpr24jldp" path="res://KADAISI MAP.jpg" id="1_c280d"]
+[ext_resource type="Script" uid="uid://bxhrqum15j15j" path="res://Librarian.gd" id="2_8h5tw"]
+[ext_resource type="Texture2D" uid="uid://bd6m50mduuhtx" path="res://final librarian sprites.png" id="2_in2tq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h5tw"]
+size = Vector2(388, 329)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08g3q"]
+size = Vector2(966, 248.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiina"]
+size = Vector2(271, 197.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yev2l"]
+size = Vector2(289, 1275)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vo6f"]
+size = Vector2(442.75, 134.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w66s8"]
+size = Vector2(91, 840)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwr63"]
+size = Vector2(127, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6ugs"]
+size = Vector2(328, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in2tq"]
+size = Vector2(36, 45)
+
+[node name="Map" type="Node2D"]
+position = Vector2(469, 23)
+
+[node name="Map image" type="Sprite2D" parent="."]
+texture = ExtResource("1_c280d")
+offset = Vector2(0, 100)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="outer wall rim" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-978, -831, -977, -768, -762, -766, -758, -959, 497, -956, 497, -696, 946, -697, 959, 830, 507, 834, 503, 1025, -57, 1022, -51, 832, -209, 829, -209, 900, -354, 898, -357, 973, -346, 999, -209, 1002, -208, 1087, -846, 1087, -781, 1065, -782, 980, -891, 982, -906, 954, -946, 956, -947, -757, -974, -757, -980, 1150, -190, 1143, -182, 894, -76, 897, -74, 1091, 521, 1089, 523, 901, 976, 897, 970, -770, 526, -770, 526, -1075, -772, -1069, -784, -831)
+
+[node name="deer room ent 1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-651, 356.5)
+shape = SubResource("RectangleShape2D_8h5tw")
+
+[node name="deer room and film room extn" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(29, 384.75)
+shape = SubResource("RectangleShape2D_08g3q")
+
+[node name="around film room" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-72.5, 608.375)
+shape = SubResource("RectangleShape2D_oiina")
+
+[node name="right lane" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(650.5, 86.5)
+shape = SubResource("RectangleShape2D_yev2l")
+
+[node name="film room north" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(284.625, 576.625)
+shape = SubResource("RectangleShape2D_1vo6f")
+
+[node name="left lane" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-797.5, -228)
+shape = SubResource("RectangleShape2D_w66s8")
+
+[node name="film bench" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(9.5, 971)
+shape = SubResource("RectangleShape2D_kwr63")
+
+[node name="maze 0" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-642, -383)
+polygon = PackedVector2Array(385, -66, 384, 3, 899, 7, 903, -258, 877, -256, 881, -63, 708, -64, 709, -191, 691, -191, 693, -65)
+
+[node name="maze 1" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-128, -57)
+polygon = PackedVector2Array(2, 0, -131, 1, -130, -197, 137, -198, 142, 311, 142, 317, 115, 317, 115, 311, 112, -128, -114, -128, -115, -67, 3, -67)
+
+[node name="maze 2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-761, -761)
+polygon = PackedVector2Array(-1, 0, 129, 0, 129, -66, 237, -63, 243, 253, 381, 255, 381, 187, 260, 188, 259, 64, 381, 64, 380, -11, 260, -10, 259, -201, 236, -200, 237, -139, 114, -137, 114, -79, 1, -73)
+
+[node name="maze 3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-61, -506)
+polygon = PackedVector2Array(-1, 0, 2, -70, -180, -70, -179, -441, -75, -444, -73, -321, -69, -254, 121, -253, 122, -191, 139, -192, 140, -259, 141, -320, 246, -319, 250, -239, 267, -239, 270, -321, 438, -320, 443, -193, 557, -189, 557, -264, 459, -268, 457, -393, 122, -395, 118, -330, -53, -333, -59, -449, -197, -450, -198, -3)
+
+[node name="maze 4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-513, 3)
+polygon = PackedVector2Array(0, 1, 142, 1, 142, -391, -129, -389, -128, -320, 120, -317, 118, -266, 0, -261, 1, -191, 120, -190, 121, -69, -2, -68)
+
+[node name="maze 5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(128, 199)
+polygon = PackedVector2Array(-2, -1, 377, 0, 377, -153, 374, -271, 78, -262, 82, -323, 62, -325, 64, -192, 368, -189, 371, -73, -3, -71)
+
+[node name="maze 6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-287, 98)
+shape = SubResource("RectangleShape2D_f6ugs")
+
+[node name="maze 7" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(126, -252)
+polygon = PackedVector2Array(-1, -1, 306, -8, 308, -257, 325, -258, 326, 68, -1, 68)
+
+[node name="maze 8" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-708, -191)
+polygon = PackedVector2Array(-1, -3, 1, 70, 58, 72, 57, 383, 78, 382, 75, -3)
+
+[node name="maze 9" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-752, -570)
+polygon = PackedVector2Array(0, 0, 101, 1, 102, 63, 120, 62, 121, -69, 0, -71)
+
+[node name="maze 10" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-697, 783)
+polygon = PackedVector2Array(-1, 1, 4, -13, 13, -27, 16, -43, 5, -42, -10, -29, -20, -21, -25, -31, -16, -36, -2, -45, 10, -60, 23, -62, 42, -96, 27, -77, 18, -79, 38, -98, 64, -102, 95, -87, 123, -69, 135, -24, 124, -16, 96, -20, 102, -11, 102, 5, 74, 9, 63, 11, 59, 12, 57, 7, 42, 7, 41, 2, 51, -4, 64, -4, 71, -2, 87, -3, 89, -6, 80, -19, 77, -29, 67, -31, 56, -39, 50, -49, 53, -38, 46, -34, 27, -33, 20, -20, 12, -9, 7, 0)
+
+[node name="maze 11" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-458, 763)
+polygon = PackedVector2Array(-1, -1, 7, 8, 24, 22, 27, 27, 26, 32, 21, 33, 12, 32, 5, 33, -1, 34, -9, 35, -17, 33, -23, 23, -26, 14, -37, 13, -44, 8, -48, -5, -40, -3, -30, 0, -21, 4, -24, -5, -40, -10, -56, -16, -66, -19, -68, -32, -58, -26, -52, -22, -57, -40, -48, -34, -45, -26, -40, -21, -33, -15, -33, -28, -28, -27, -18, -6, -13, -3, -9, -10, -11, -22, -18, -31, -21, -38, -16, -39, -8, -28, -4, -30, -3, -39, 3, -39, 6, -33, 3, -26, 0, -17, 2, -16, 7, -22, 12, -21, 12, -13)
+
+[node name="Librarian" type="Node" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Librarian"]
+position = Vector2(-76, 0)
+script = ExtResource("2_8h5tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Librarian/CharacterBody2D"]
+position = Vector2(234, 17)
+scale = Vector2(0.119204, 0.117525)
+texture = ExtResource("2_in2tq")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Librarian/CharacterBody2D"]
+position = Vector2(234, 30.5)
+shape = SubResource("RectangleShape2D_in2tq")
